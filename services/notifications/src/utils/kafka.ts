@@ -13,7 +13,7 @@ const consumer = kafka.consumer({
 
 const topicsToSubscribe: Record<typeof topics[number], Function> = {
   "message-created": messageCreatedHandler,
-  "test-topic": () => testTopicHandler,
+  "test-topic": testTopicHandler,
 };
 
 async function messageCreatedHandler(data: any) {
